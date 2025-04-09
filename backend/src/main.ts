@@ -13,7 +13,12 @@ async function bootstrap() {
 
   app.use(compression());
 
-  app.enableCors();
+  app.enableCors({
+    origin: 'http://localhost:3000',
+    methods: 'GET',
+    credentials: true,
+    exposedHeaders: ['ETag', 'Cache-Control'],
+  });
 
   app.useGlobalPipes(new ValidationPipe());
 
