@@ -14,13 +14,13 @@ export class ETagInterceptor implements NestInterceptor {
 
         const etag = this.generateETag(responseBody);
 
-        response.setHeader('ETag', etag);
         response.setHeader('Cache-Control', 'public, max-age=60');
+        response.setHeader('ETag', etag);
 
         const ifNoneMatch = request.headers['if-none-match'];
 
         if (ifNoneMatch && this.compareETag(ifNoneMatch, etag)) {
-          response.status(304).send();
+          response.status(304);
 
           return null;
         }
