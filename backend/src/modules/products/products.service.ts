@@ -22,7 +22,7 @@ export class ProductsService {
       price: 120000,
       stock: 15,
       description: 'ビジネス利用に最適な高性能ノートパソコン',
-      updatedAt: new Date().toISOString(),
+      updatedAt: "2025-04-09T10:16:09.088Z",
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ export class ProductsService {
       price: 15000,
       stock: 42,
       description: 'ノイズキャンセリング機能搭載の高音質イヤホン',
-      updatedAt: new Date().toISOString(),
+      updatedAt: "2025-04-09T10:16:09.088Z",
     },
     {
       id: 3,
@@ -38,7 +38,7 @@ export class ProductsService {
       price: 25000,
       stock: 28,
       description: '健康管理と通知機能を備えた最新スマートウォッチ',
-      updatedAt: new Date().toISOString(),
+      updatedAt: "2025-04-09T10:16:09.088Z",
     },
   ];
 }
