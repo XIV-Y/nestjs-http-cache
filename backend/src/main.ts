@@ -17,7 +17,7 @@ async function bootstrap() {
     origin: 'http://localhost:3000',
     methods: 'GET',
     credentials: true,
-    exposedHeaders: ['ETag', 'Cache-Control'],
+    exposedHeaders: ['ETag', 'Cache-Control', 'Last-Modified'],
   });
 
   app.useGlobalPipes(new ValidationPipe());
