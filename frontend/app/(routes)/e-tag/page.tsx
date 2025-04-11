@@ -4,21 +4,19 @@ import { useEffect, useState } from "react";
 import { Product } from "@/app/types/product";
 import fetchWithETag from "@/app/utils/fetch-with-etag";
 
-export default function Home() {
-  const [isLoading, setIsLoading] = useState(false);
+export default function ETag() {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     const handleRefresh = async () => {
-      setIsLoading(true);
       try {
         const data = await fetchWithETag<Product[]>(
           "http://localhost:3001/api/products"
         );
 
         setProducts(data);
-      } finally {
-        setIsLoading(false);
+      } catch (error) {
+        console.error("Error fetching products:", error);
       }
     };
 
