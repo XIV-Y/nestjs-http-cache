@@ -77,6 +77,3 @@ docker-compose up --build
 - sessionStorage: タイムスタンプとデータの保存
 - If-Modified-Sinceヘッダーの自動付与
 - 304レスポンス時のキャッシュデータ使用
-## 貢献
-
-バグ報告や機能要望は、GitHubのIssuesでお知らせください。プルリクエストも歓迎します。
